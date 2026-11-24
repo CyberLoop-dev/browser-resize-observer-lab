@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resize Observer Lab</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header><p class="eyebrow">BROWSER API FIELD GUIDE</p><h1>Resize Observer Lab</h1><p class="lede">Change the target size and watch the browser report its layout boxes.</p></header>
+    <section class="controls card">
+      <label>Width <output id="widthValue">320px</output><input id="width" type="range" min="180" max="620" value="320"></label>
+      <label>Height <output id="heightValue">180px</output><input id="height" type="range" min="100" max="360" value="180"></label>
+    </section>
+    <section class="stage card"><div class="stage-head"><span>Observed element</span><span class="live">● observing</span></div><div class="target-wrap"><div id="target" class="target"><strong>Resize me</strong><span>ResizeObserver watches this box.</span></div></div></section>
+    <section class="metrics">
+      <article class="card"><span>Content box</span><strong id="contentSize">—</strong><small>CSS content dimensions</small></article>
+      <article class="card"><span>Border box</span><strong id="borderSize">—</strong><small>Includes padding and border</small></article>
+      <article class="card"><span>Device pixels</span><strong id="deviceSize">—</strong><small>When browser exposes it</small></article>
+    </section>
+    <section class="card log-card"><div class="stage-head"><strong>Observer log</strong><button id="clearLog" class="quiet">Clear</button></div><ol id="log" aria-live="polite"></ol></section>
+    <footer>Local-only demo · ResizeObserver · No external requests</footer>
+  </main>
+</body>
+</html>
